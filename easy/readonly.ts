@@ -1,4 +1,6 @@
-type MyReadonly<T> = Readonly<T>
+type MyReadonly<T> = {
+ readonly [P in keyof T]: T[P]
+}
 
 
 /* _____________ Test Cases _____________ */
